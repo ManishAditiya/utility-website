@@ -15,9 +15,11 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(-45deg, #ff6ec4, #7873f5, #4ade80, #ff9a9e);
-      background-size: 400% 400%;
+      background-size: 500% 500%;
       animation: gradientShift 10s ease infinite;
-      padding: 40px;
+      padding: 110px;
+      
+
     }
     @keyframes gradientShift {
   0% {
@@ -30,6 +32,76 @@
     background-position: 0% 50%;
   }
 }
+header{
+    background: #4e27b2;
+
+}
+
+li{
+    list-style:none;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar{
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+
+    background: #6617a7;
+    position: fixed;
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    z-index: 1000;
+    width: 100vw;
+}
+.content {
+  padding-top: 100px;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    gap: 60px;
+    margin-right: 50px;
+
+}
+
+.nav-branding{
+    font-size: 2rem;
+
+}
+
+.nav-link{
+    transition: 0.7s ease;
+}
+.nav-link:hover{
+    color: dodgerblue;
+    text-shadow: 3px 2px 3px #2c9bf0;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
 
     h1 {
       text-align: center;
@@ -74,7 +146,35 @@
 </head>
 
 <body>
-  <h1>Utility Dashboard</h1>
+
+  
+
+  <header>
+    <nav class="navbar">
+        <a href="#" class="nav-branding">Utility Dashboard</a>
+        
+        
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#home" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="about.html" class="nav-link">About me</a>
+            </li>
+            <li class="nav-item">
+                <a href="https://www.linkedin.com/in/manish-aditiya-gupta-585383282/" class="nav-link">Connect</a>
+            </li>
+
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+</header>
+
+
   <div class="grid">
     <div class="card" onclick="launchFeature('qr')">
       <i class="fas fa-qrcode"></i>
