@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Utility Webpage</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(-45deg, #ff6ec4, #7873f5, #4ade80, #ff9a9e);
+      background-size: 400% 400%;
+      animation: gradientShift 10s ease infinite;
+      padding: 40px;
+    }
+    @keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #dab36a;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card i {
+      font-size: 36px;
+      color: #656262;
+      margin-bottom: 10px;
+    }
+
+    .card span {
+      display: block;
+      font-size: 16px;
+      color: #333;
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <h1>Utility Dashboard</h1>
+  <div class="grid">
+    <div class="card" onclick="launchFeature('qr')">
+      <i class="fas fa-qrcode"></i>
+      <span>QR Generator</span>
+    </div>
+    <div class="card" onclick="launchFeature('todo')">
+      <i class="fas fa-tasks"></i>
+      <span>To-Do List</span>
+    </div>
+    <div class="card" onclick="launchFeature('weather')">
+      <i class="fas fa-cloud-sun"></i>
+      <span>Weather Report</span>
+    </div>
+    <div class="card" onclick="launchFeature('notes')">
+      <i class="fas fa-sticky-note"></i>
+      <span>Notes</span>
+    </div>
+    <div class="card" onclick="launchFeature('stopwatch')">
+      <i class="fas fa-stopwatch"></i>
+      <span>Stopwatch</span>
+    </div>
+    <div class="card" onclick="launchFeature('calculator')">
+      <i class="fas fa-calculator"></i>
+      <span>Calculator</span>
+    </div>
+    <div class="card" onclick="launchFeature('more')">
+      <i class="fas fa-ellipsis-h"></i>
+      <span>More</span>
+    </div>
+  </div>
+
+  <script>
+    function launchFeature(feature) {
+      alert(`You clicked on: ${feature}`);
+      
+    }
+  </script>
+</body>
+
+</html>
