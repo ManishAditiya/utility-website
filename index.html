@@ -115,6 +115,34 @@ a{
       max-width: 1000px;
       margin: 0 auto;
     }
+    .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* responsive grid */
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  background-color: #deb97e;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 80%;
+  height: 120px; /* control height */
+  object-fit: contain; /* prevents stretching */
+  margin: 0 auto;
+  display: block;
+}
 
     .card {
       background: #dab36a;
@@ -176,31 +204,39 @@ a{
 
 
   <div class="grid">
+    
     <div class="card" onclick="launchFeature('qr')">
+      <img src="/asset/qr code.webp" alt="Example Image">
       <i class="fas fa-qrcode"></i>
       <span>QR Generator</span>
     </div>
     <div class="card" onclick="launchFeature('todo')">
+      <img src="/asset/to do list.webp" alt="">
       <i class="fas fa-tasks"></i>
       <span>To-Do List</span>
     </div>
     <div class="card" onclick="launchFeature('weather')">
+      <img src="/asset/weather.webp" alt="">
       <i class="fas fa-cloud-sun"></i>
       <span>Weather Report</span>
     </div>
     <div class="card" onclick="launchFeature('notes')">
+      <img src="/asset/notes.webp" alt="">
       <i class="fas fa-sticky-note"></i>
       <span>Notes</span>
     </div>
     <div class="card" onclick="launchFeature('stopwatch')">
+      <img src="/asset/stopwatch.webp" alt="">
       <i class="fas fa-stopwatch"></i>
       <span>Stopwatch</span>
     </div>
     <div class="card" onclick="launchFeature('calculator')">
+      <img src="/asset/calculator.webp" alt="">
       <i class="fas fa-calculator"></i>
       <span>Calculator</span>
     </div>
     <div class="card" onclick="launchFeature('more')">
+      
       <i class="fas fa-ellipsis-h"></i>
       <span>More</span>
     </div>
