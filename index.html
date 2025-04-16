@@ -169,6 +169,52 @@ a{
       font-size: 16px;
       color: #333;
     }
+
+    @media(max-width: 768px){
+    .hamburger{
+
+        display: block;
+        
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .navbar{
+        position: fixed;
+        background: #6617a7;
+        width: 100vw;
+        z-index: 9;
+    }
+    .nav-menu{
+        z-index: 9;
+        position: fixed;
+        Left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #262626;
+        width: 100%;
+        text-align: center;
+        transition: 0.4s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+    .nav-menu.active{
+        Left: 0;
+    }
+
+    
+
+}
+
   </style>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
@@ -251,6 +297,18 @@ a{
   <script>
     function launchFeature() {
       alert(`Hold on! Some new utilities will be added soon`);
+
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+      console.log("Acitve");
+      hamburger.addEventListener("click", () =>{
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+})
+    document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () =>{
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}))
       
     }
   </script>
