@@ -226,12 +226,12 @@ a{
       <i class="fas fa-sticky-note"></i>
       <span>Notes</span>
     </div>
-    <div class="card" onclick="launchFeature('stopwatch')">
+    <div class="card" onclick="window.open('/Stopwatch/index.html')">
       <img src="/asset/stopwatch.webp" alt="">
       <i class="fas fa-stopwatch"></i>
       <span>Stopwatch</span>
     </div>
-    <div class="card" onclick="launchFeature('calculator')">
+    <div class="card" onclick="window.open('Calculator/index.html')">
       <img src="/asset/calculator.webp" alt="">
       <i class="fas fa-calculator"></i>
       <span>Calculator</span>
@@ -241,7 +241,7 @@ a{
       <i class="fas fa-textToSpeech"></i>
       <span>Text to speech</span>
     </div>
-    <div class="card" onclick="launchFeature('more')">
+    <div class="card" onclick="launchFeature()">
       <img src="/asset/coming soon.webp" alt="">
       <i class="fas fa-ellipsis-h"></i>
       <span>Coming soon...</span>
@@ -249,8 +249,8 @@ a{
   </div>
 
   <script>
-    function launchFeature(feature) {
-      alert(`You clicked on: ${feature}`);
+    function launchFeature() {
+      alert(`Hold on! Some new utilities will be added soon`);
       
     }
   </script>
